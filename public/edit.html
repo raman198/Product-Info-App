@@ -1,0 +1,51 @@
+<!doctype html>
+<html >	
+	<body ng-controller= "editcntrl">
+		<div class="container" style="width:100% ">
+			<center>
+				<form action="#/edit"  ng-submit="add()" >
+				<div style="width:100% ; padding:10px  ; margin-top:50px">	
+		
+				<div class="row" style="padding:10px ">
+					<div class="col-md-6" style="text-align:left">
+						<span>Product Id : </span><input type = "text" ng-model = "addProduct.id" required>
+					</div>
+					<div class="col-md-6" style="text-align:left">
+						<span>	Quantity :   </span> <input type = "number" ng-model = "addProduct.qty" required>
+					</div>
+				</div>		
+		
+				<div class="row" style="padding:10px ">
+					<div class="col-md-12" style="text-align:left"> 
+						<div>
+							<span>Product Name </span>
+						</div>
+						<div>
+							<input type = "text" ng-model = "addProduct.name" style="width:90%" required>
+						</div>	
+					</div>	
+  				</div>
+
+  				<div class="row" style="padding:10px ">				
+					<div class="col-md-12" style="text-align:left"> 	
+						<div> <span>Cost Price</span> </div>
+						<div>
+							<input type = "text" ng-model = "addProduct.CP" style="width:60%"  required>
+						</div>
+					</div>	
+				</div>
+
+				<div class="row" style="padding:10px ">				
+					<div class="col-md-12" style="text-align:left"> 	
+						<div> <span> Selling Price </span> </div>
+						<div>
+							<input type = "text" ng-model = "addProduct.SP" style="width:60%"  required >
+						</div>
+					</div>
+				</div>
+				<input type = "submit" value = "Add Product">
+				</form>
+			</center>
+		</div>
+	</body>
+</html>

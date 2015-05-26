@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<body ng-controller="homecntrl">
+	<style>
+		span{
+			font-size: 1.5em;
+		}
+	</style>
+	<div class="container" style="width:100% ">
+		
+		<center>
+			<div style="margin-bottom:30px">
+				<input list="products" ng-model="search" ng-keypress="searchProduct($event)" style="width:40%" >
+				<datalist id="products">
+					<option ng-repeat="productList in products" value={{productList.name}} >
+				</datalist>
+			</div>	
+			
+	<div style="width:100% ;  padding:10px  ; margin-top:50px" ng-show = "isData">	
+		
+		<div class="row" style=" padding:10px ">
+			<div class="col-md-6" style="text-align:left">
+				<span>Product Id: </span>{{product.id}}
+			</div>
+			<div class="col-md-6" style="text-align:left">
+				<span>	Quantity :   </span> {{product.qty}}
+			</div>
+		</div>		
+		
+		<div class="row" style="padding:10px ">
+			<div class="col-md-12" style="text-align:left"> 
+				<div> <span>Product Name </span> </div>
+				<div>
+					<input type="text" ng-model = "product.name" ng-keypress="update($event,product)" style="width:90%">
+				</div>	
+			</div>	
+  		</div>
+
+  		<div class="row" style="padding:10px ">				
+			<div class="col-md-12" style="text-align:left"> 	
+				<div> <span>Cost Price</span> </div>
+				<div>	
+					<input type="text" ng-model = "product.CP" readonly style="width:60%"></td> 
+				</div>
+			</div>	
+		</div>
+
+		<div class="row" style="padding:10px ">				
+			<div class="col-md-12" style="text-align:left"> 	
+				<div> <span> Selling Price </span> </div>
+				<div>
+					<input type="text" ng-model = "product.SP" ng-keypress="update($event,product)" style="width:60%"></td>
+				</div>
+			</div>
+		</div>	
+	</div>	
+</center>
+	</div>
+</html>	
